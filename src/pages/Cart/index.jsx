@@ -17,7 +17,7 @@ export default function Carrinho() {
       transition={{ duration: 0.5 }}
     >
       <DivCart>
-        {produtosNaSacola.length > 0 ? (
+        {produtosNaSacola?.length > 0 ? (
           <>
             <main>
               <ul>
@@ -53,22 +53,16 @@ export default function Carrinho() {
             <aside>
               <div>
                 <h2>Resumo do pedido</h2>
-                {produtosNaSacola.length > 0 ? (
-                  <>
-                    <div>
-                      <p>{produtosNaSacola.length} produtos</p>
-                      <p>
-                        {valorTotal.toLocaleString("pt-BR", {
-                          style: "currency",
-                          currency: "BRL",
-                        })}
-                      </p>
-                    </div>
-                    <button>Finalizar Pedido</button>
-                  </>
-                ) : (
-                  <h4>Sacola vazia</h4>
-                )}
+                <div>
+                  <p>{produtosNaSacola.length} produtos</p>
+                  <p>
+                    {valorTotal.toLocaleString("pt-BR", {
+                      style: "currency",
+                      currency: "BRL",
+                    })}
+                  </p>
+                </div>
+                <button>Finalizar Pedido</button>
               </div>
             </aside>
           </>

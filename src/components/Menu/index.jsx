@@ -27,7 +27,7 @@ export function Menu() {
             </ul>
             
             <Bag onClick={() => navigate("../carrinho", { replace: true })} />
-            {products.length > 0 ? <p>{products.length}</p> : <></>}
+            {products?.length > 0 ? <p>{products.length}</p> : <></>}
         </Header>
         <Outlet/>
         </>

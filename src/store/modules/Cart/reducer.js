@@ -3,7 +3,7 @@ import { ADD_CART } from "../Cart/actionTypes";
 
 
 
-const listCart = JSON.parse(localStorage.getItem("listCartApple"))
+const listCart = JSON.parse(localStorage.getItem("listCartApple")) || []
 function cartReducer(state = listCart, action) {
     switch (action.type) {
         case REMOVE_CART:
